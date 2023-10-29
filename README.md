@@ -7,7 +7,7 @@
 - [ ] ~~bufferline~~ Dismissed for being too much clutter
 - [ ] Git - Fugitive, GitSigns
 - [ ] ~~Terminal Integration~~ Dismissed in favor of using tmux outside of neovim
-- [ ] winbar config
+- [x] winbar config
 - [ ] status line
 - [ ] trouble
 
