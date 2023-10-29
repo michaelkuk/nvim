@@ -1,16 +1,30 @@
 return {
-  {
     "nvim-treesitter/nvim-treesitter",
-    lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
-    opts = {
-      ensure_installed  = {},
-      auto_install = true,
+    config = function()
+      require("nvim-treesitter.configs").setup({
+      ensure_installed  = {
+        "json",
+          "javascript",
+          "typescript",
+          "tsx",
+          "yaml",
+          "html",
+          "css",
+          "prisma",
+          "markdown",
+          "markdown_inline",
+          "graphql",
+          "lua",
+          "elixir",
+          "eex",
+          "heex",
+      },
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
-    },
-  },
+    })
+  end
 }
