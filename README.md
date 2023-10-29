@@ -10,7 +10,7 @@
 - [x] winbar config
 - [x] status line
 - [x] Code completion
-- [ ] Syntax Hightlinting base
+- [x] Syntax Hightlinting base
 - [ ] LSP base
 - [ ] trouble
 
