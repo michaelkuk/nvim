@@ -8,7 +8,7 @@
 - [ ] Git - Fugitive, GitSigns
 - [ ] ~~Terminal Integration~~ Dismissed in favor of using tmux outside of neovim
 - [x] winbar config
-- [ ] status line
+- [x] status line
 - [ ] trouble
 
 ## Languages
