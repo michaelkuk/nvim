@@ -1,9 +1,13 @@
 return {
-  'nvim-lualine/lualine.nvim',
+  "nvim-lualine/lualine.nvim",
   lazy = true,
   event = { "BufReadPre", "BufNewFile" },
   depencies = {
-    { 'nvim-tree/nvim-web-devicons' },
+    { "nvim-tree/nvim-web-devicons" },
   },
-  opts = {}
+  opts = {
+    sections = {
+      lualine_x = { "overseer" },
+    },
+  },
 }

@@ -13,6 +13,7 @@
 - [x] Syntax Hightlinting base
 - [x] LSP base
 - [x] trouble
+- [x] Overseer 'stevearc/overseer.nvim'
 
 ## Languages
 ### Frontend
