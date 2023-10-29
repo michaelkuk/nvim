@@ -9,6 +9,9 @@
 - [ ] ~~Terminal Integration~~ Dismissed in favor of using tmux outside of neovim
 - [x] winbar config
 - [x] status line
+- [x] Code completion
+- [ ] Syntax Hightlinting base
+- [ ] LSP base
 - [ ] trouble
 
 ## Languages
