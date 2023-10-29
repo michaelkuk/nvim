@@ -3,11 +3,13 @@
 ## Features:
 - [x] Colorscheme
 - [x] Telescope
-- [ ] nvim-tree
-- [ ] bufferline
-- [ ] trouble
+- [x] nvim-tree
+- [ ] ~~bufferline~~ Dismissed for being too much clutter
 - [ ] Git - Fugitive, GitSigns
-- [ ] Terminal Integration
+- [ ] ~~Terminal Integration~~ Dismissed in favor of using tmux outside of neovim
+- [ ] winbar config
+- [ ] status line
+- [ ] trouble
 
 ## Languages
 ### Frontend
