@@ -11,7 +11,7 @@
 - [x] status line
 - [x] Code completion
 - [x] Syntax Hightlinting base
-- [ ] LSP base
+- [x] LSP base
 - [ ] trouble
 
 ## Languages
