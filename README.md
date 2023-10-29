@@ -1,11 +1,11 @@
 # nvim config
 
-## Features:
+## Base feature config:
 - [x] Colorscheme
 - [x] Telescope
 - [x] nvim-tree
 - [ ] ~~bufferline~~ Dismissed for being too much clutter
-- [ ] Git - Fugitive, GitSigns
+- [x] Git - Fugitive, GitSigns
 - [ ] ~~Terminal Integration~~ Dismissed in favor of using tmux outside of neovim
 - [x] winbar config
 - [x] status line
