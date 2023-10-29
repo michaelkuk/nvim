@@ -12,7 +12,7 @@
 - [x] Code completion
 - [x] Syntax Hightlinting base
 - [x] LSP base
-- [ ] trouble
+- [x] trouble
 
 ## Languages
 ### Frontend
