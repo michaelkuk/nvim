@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "michaelkuk.plugins" } }, {
   install = {
-    colorscheme = { "nightfly" },
+    colorscheme = { "catppuccin-mocha" },
   },
   checker = {
     enabled = true,
