@@ -4,6 +4,9 @@ local opt = vim.opt -- for conciseness
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
+-- Keep cursor in the middle of the screen
+opt.scrolloff = 999
+
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
