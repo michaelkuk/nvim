@@ -1,0 +1,117 @@
+return {
+  --{
+  --  "akinsho/flutter-tools.nvim",
+  --  lazy = false,
+  --  dependencies = {
+  --    "nvim-lua/plenary.nvim",
+  --    "stevearc/dressing.nvim", -- optional for vim.ui.select
+  --  },
+  --  config = function()
+  --    require("flutter-tools").setup({
+  --      ui = {
+  --        border = "rounded",
+  --        notification_style = "plugin",
+  --      },
+  --      decorations = {
+  --        statusline = {
+  --          app_version = false,
+  --          device = true,
+  --        },
+  --      },
+  --      debugger = {
+  --        enabled = true,
+  --        run_via_dap = true,
+  --        exception_breakpoints = {},
+  --        register_configurations = function(paths)
+  --          require("dap").configurations.dart = {
+  --            {
+  --              type = "dart",
+  --              request = "launch",
+  --              name = "Launch dart",
+  --              dartSdkPath = paths.dart_sdk,
+  --              flutterSdkPath = paths.flutter_sdk,
+  --              program = "${workspaceFolder}/lib/main.dart",
+  --              cwd = "${workspaceFolder}",
+  --            },
+  --            {
+  --              type = "flutter",
+  --              request = "launch",
+  --              name = "Launch flutter",
+  --              dartSdkPath = paths.dart_sdk,
+  --              flutterSdkPath = paths.flutter_sdk,
+  --              program = "${workspaceFolder}/lib/main.dart",
+  --              cwd = "${workspaceFolder}",
+  --            }
+  --          }
+  --        end,
+  --      },
+  --      flutter_path = nil, -- Uses flutter from PATH
+  --      flutter_lookup_cmd = "which flutter",
+  --      fvm = false, -- Set to true if using FVM
+  --      widget_guides = {
+  --        enabled = false,
+  --      },
+  --      closing_tags = {
+  --        highlight = "ErrorMsg",
+  --        prefix = "> ",
+  --        enabled = true,
+  --      },
+  --      dev_log = {
+  --        enabled = true,
+  --        notify_errors = false,
+  --        open_cmd = "tabedit",
+  --      },
+  --      dev_tools = {
+  --        autostart = false,
+  --        auto_open_browser = false,
+  --      },
+  --      outline = {
+  --        open_cmd = "30vnew",
+  --        auto_open = false,
+  --      },
+  --      lsp = {
+  --        color = {
+  --          enabled = false,
+  --          background = false,
+  --          background_color = nil,
+  --          foreground = false,
+  --          virtual_text = true,
+  --          virtual_text_str = "■",
+  --        },
+  --        on_attach = function(client, bufnr)
+  --          -- Add custom keymaps here
+  --          local opts = { buffer = bufnr, silent = true }
+  --          vim.keymap.set("n", "<leader>fh", "<cmd>FlutterReload<cr>", opts)
+  --          vim.keymap.set("n", "<leader>fR", "<cmd>FlutterRestart<cr>", opts)
+  --          vim.keymap.set("n", "<leader>fq", "<cmd>FlutterQuit<cr>", opts)
+  --          vim.keymap.set("n", "<leader>fD", "<cmd>FlutterDetach<cr>", opts)
+  --          vim.keymap.set("n", "<leader>fo", "<cmd>FlutterOutlineToggle<cr>", opts)
+  --          vim.keymap.set("n", "<leader>ft", "<cmd>FlutterDevTools<cr>", opts)
+  --          vim.keymap.set("n", "<leader>fc", "<cmd>FlutterLogClear<cr>", opts)
+  --        end,
+  --        capabilities = function()
+  --          local ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+  --          if ok then
+  --            return cmp_nvim_lsp.default_capabilities()
+  --          end
+  --          return {}
+  --        end,
+  --      },
+  --    })
+  --  end,
+  --  keys = {
+  --    { "<leader>fr", "<cmd>FlutterRun<cr>", desc = "Flutter Run" },
+  --    { "<leader>fh", "<cmd>FlutterReload<cr>", desc = "Flutter Hot Reload" },
+  --    { "<leader>fR", "<cmd>FlutterRestart<cr>", desc = "Flutter Hot Restart" },
+  --    { "<leader>fq", "<cmd>FlutterQuit<cr>", desc = "Flutter Quit" },
+  --    { "<leader>fD", "<cmd>FlutterDetach<cr>", desc = "Flutter Detach" },
+  --    { "<leader>fo", "<cmd>FlutterOutlineToggle<cr>", desc = "Flutter Outline Toggle" },
+  --    { "<leader>ft", "<cmd>FlutterDevTools<cr>", desc = "Flutter DevTools" },
+  --    { "<leader>fc", "<cmd>FlutterLogClear<cr>", desc = "Flutter Log Clear" },
+  --    { "<leader>fd", "<cmd>FlutterDevices<cr>", desc = "Flutter Devices" },
+  --    { "<leader>fE", "<cmd>FlutterEmulators<cr>", desc = "Flutter Emulators" },
+  --    { "<leader>fl", "<cmd>FlutterReloadAll<cr>", desc = "Flutter Reload All" },
+  --    { "<leader>fs", "<cmd>FlutterSuper<cr>", desc = "Flutter Super" },
+  --  },
+  --},
+}

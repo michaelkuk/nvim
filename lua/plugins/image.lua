@@ -1,6 +1,9 @@
 return {
   "3rd/image.nvim",
   event = "VeryLazy",
+  cond = function()
+    return vim.fn.executable("magick") == 1 and os.getenv("TERM_PROGRAM") ~= nil
+  end,
   opts = {
     backend = "kitty",
     processor = "magick_cli",

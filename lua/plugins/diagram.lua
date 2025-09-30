@@ -3,6 +3,9 @@ return {
   dependencies = {
     "3rd/image.nvim",
   },
+  cond = function()
+    return vim.fn.executable("magick") == 1 and os.getenv("TERM_PROGRAM") ~= nil
+  end,
   opts = { -- you can just pass {}, defaults below
     renderer_options = {
       mermaid = {
@@ -23,7 +26,7 @@ return {
         sketch = nil,
       },
       gnuplot = {
-        sze = nil, -- nil | "800,600" | ...
+        size = nil, -- nil | "800,600" | ...
         font = nil, -- nil | "Arial,12" | ...
         theme = nil, -- nil | "light" | "dark" | custom theme string
       },
