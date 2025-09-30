@@ -4,4 +4,6 @@
 --
 local map = LazyVim.safe_keymap_set
 
-map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "find string in cwd" })
+map("n", "<leader>fs", function()
+  Snacks.picker.grep()
+end, { desc = "find string in cwd" })

@@ -45,19 +45,17 @@ Custom plugins can:
 ### LazyVim Extras
 
 Configured extras in lazyvim.json include:
-- Languages: TypeScript, Python, C/C++, Docker, Git, JSON, Markdown, YAML, Zig, Erlang, Helm, Toml, Tailwind
-- Tools: DAP debugging, Harpoon2, Overseer, Telescope, Prettier formatting, ESLint linting, REST client
+- Languages: TypeScript, Python, C/C++, CMake, Docker, Git, JSON, Markdown, YAML, Zig, Erlang, Helm, Toml, Tailwind
+- Tools: DAP debugging, Harpoon2, Overseer, Prettier formatting, ESLint linting, REST client
 
 ### Key Custom Plugins
 
-- **claude-code.nvim**: Claude Code integration with floating window interface (lua/plugins/claude_code.lua)
-- **diagram.nvim**: Diagram rendering support for Mermaid, PlantUML, D2, and Gnuplot (lua/plugins/diagram.lua)
-- **neorg**: Note-taking and organization with workspace at ~/.notes (lua/plugins/neorg.lua)
-- **image.nvim**: Image display support for diagrams (lua/plugins/image.lua)
-- **LSP configurations**: Custom TypeScript/VTSLS and Dart LSP settings (lua/plugins/lsp.lua)
-- **Flutter support**: Flutter development tools (lua/plugins/flutter.lua)
-- **GitLab integration**: GitLab.nvim plugin (lua/plugins/gitlab.lua)
-- **Snacks.nvim**: UI enhancements (lua/plugins/snacks.lua)
+- **claude-code.nvim**: Claude Code integration with 80% floating window, centered, rounded border (lua/plugins/claude_code.lua)
+- **LSP configurations**: Custom TypeScript/VTSLS settings with non-relative imports and Dart LSP with completion features (lua/plugins/lsp.lua)
+- **GitLab.nvim**: GitLab integration with insecure connections enabled for self-hosted instances (lua/plugins/gitlab.lua)
+- **Snacks.nvim**: Enhanced file explorer showing hidden/ignored files with workspace root boundary protection (lua/plugins/snacks.lua)
+- **Flutter tools**: Comprehensive Flutter development configuration (currently commented out in lua/plugins/flutter.lua)
+- **Fugitive**: Git integration (lua/plugins/fugitive.lua)
 
 ### Configuration Files
 
@@ -86,3 +84,13 @@ Current custom mappings:
 ### Language Support
 
 Language support is primarily managed through LazyVim extras in lazyvim.json. For custom language configurations, create plugin overrides in `lua/plugins/`.
+
+### Workspace Root Detection
+
+The configuration has custom root detection logic that prioritizes project markers for monorepos and yarn workspaces:
+
+```lua
+vim.g.root_spec = { { "yarn.lock", ".git", "package.json" }, "lsp", "cwd" }
+```
+
+This ensures correct workspace boundaries in `lua/config/options.lua:7`. The Snacks file explorer also prevents navigation above the detected workspace root.
