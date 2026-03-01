@@ -45,7 +45,7 @@ Custom plugins can:
 ### LazyVim Extras
 
 Configured extras in lazyvim.json include:
-- Languages: TypeScript, Python, C/C++, CMake, Docker, Git, JSON, Markdown, YAML, Zig, Erlang, Helm, Toml, Tailwind
+- Languages: Ansible, C/C++ (Clangd), CMake, Docker, Elixir, Erlang, Git, Helm, JSON, Markdown, Python, SQL, Tailwind, Toml, TypeScript, YAML, Zig
 - Tools: DAP debugging, Harpoon2, Overseer, Prettier formatting, ESLint linting, REST client
 
 ### Key Custom Plugins
@@ -53,7 +53,11 @@ Configured extras in lazyvim.json include:
 - **claude-code.nvim**: Claude Code integration with 80% floating window, centered, rounded border (lua/plugins/claude_code.lua)
 - **LSP configurations**: Custom TypeScript/VTSLS settings with non-relative imports and Dart LSP with completion features (lua/plugins/lsp.lua)
 - **GitLab.nvim**: GitLab integration with insecure connections enabled for self-hosted instances (lua/plugins/gitlab.lua)
-- **Snacks.nvim**: Enhanced file explorer showing hidden/ignored files with workspace root boundary protection (lua/plugins/snacks.lua)
+- **Snacks.nvim**: Enhanced picker and file explorer configuration (lua/plugins/snacks.lua)
+  - All pickers (grep, files, recent) default to project root instead of cwd
+  - Shows hidden files and gitignored files by default
+  - Explorer has workspace root boundary protection preventing navigation above project root
+- **uv.nvim**: Python virtual environment management with Snacks picker integration (lua/plugins/uv.lua)
 - **Flutter tools**: Comprehensive Flutter development configuration (currently commented out in lua/plugins/flutter.lua)
 - **Fugitive**: Git integration (lua/plugins/fugitive.lua)
 
@@ -79,7 +83,7 @@ To override LazyVim defaults, create a plugin file with the same plugin name and
 Custom keymaps go in `lua/config/keymaps.lua`. Use `LazyVim.safe_keymap_set` function for consistency.
 
 Current custom mappings:
-- `<leader>fs` - Find string in current working directory via Telescope live_grep
+- `<leader>fs` - Grep in project root directory (uses LazyVim.pick("grep") with root detection)
 
 ### Language Support
 

@@ -7,8 +7,35 @@ return {
         -- This makes *all* Snacks pickers (including the explorer) show hidden files:
         hidden = true, -- show dotfiles
         ignored = true, -- show files normally ignored by .gitignore
-        -- If you only want it for the file-tree explorer (and not e.g. for 'files' or 'git_files'),
-        -- you can target just that source:
+        -- Configure all picker sources to default to project root instead of cwd
+        sources = {
+          grep = {
+            ignored = false,
+            config = function(opts)
+              if not opts.cwd then
+                opts.cwd = LazyVim.root.get({ normalize = true })
+              end
+              return opts
+            end,
+          },
+          files = {
+            config = function(opts)
+              if not opts.cwd then
+                opts.cwd = LazyVim.root.get({ normalize = true })
+              end
+              return opts
+            end,
+          },
+          recent = {
+            config = function(opts)
+              if not opts.cwd and not opts.filter then
+                -- Only set cwd for recent files if not already filtered by cwd
+                opts.cwd = LazyVim.root.get({ normalize = true })
+              end
+              return opts
+            end,
+          },
+        },
       },
       explorer = {
         -- Additional explorer-specific configuration

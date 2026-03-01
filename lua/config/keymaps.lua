@@ -4,6 +4,5 @@
 --
 local map = LazyVim.safe_keymap_set
 
-map("n", "<leader>fs", function()
-  Snacks.picker.grep()
-end, { desc = "find string in cwd" })
+-- Use LazyVim.pick to ensure root detection
+map("n", "<leader>fs", LazyVim.pick("grep"), { desc = "Grep (Root Dir)" })
