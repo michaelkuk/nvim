@@ -68,6 +68,14 @@ return {
   -- vim-tmux-navigator for seamless Ctrl+h/j/k/l across neovim/tmux
   {
     "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+      "TmuxNavigatorProcessList",
+    },
     keys = {
       { "<C-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Navigate Left" },
       { "<C-j>", "<cmd>TmuxNavigateDown<cr>", desc = "Navigate Down" },
